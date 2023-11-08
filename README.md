@@ -1,6 +1,6 @@
 ## `Le Journal du Hacker` Articles Retriever
 
-[![Node.js Package](https://github.com/benoitpetit/ljdhar/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/benoitpetit/ljdhar/actions/workflows/npm-publish.yml)
+![ljdhar npm package to npmjs.com](https://www.npmjs.com/package/ljdhar)
 
 This project use Puppeteer to retrieve the latest articles from Le Journal du Hacker.
 
