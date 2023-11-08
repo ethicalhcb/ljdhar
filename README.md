@@ -1,4 +1,4 @@
-## Le Journal du Hacker Article Retrieval Project
+## `Le Journal du Hacker` Articles Retriever
 
 This project use Puppeteer to retrieve the latest articles from Le Journal du Hacker.
 
