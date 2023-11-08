@@ -20,8 +20,7 @@ Here's an example of how to use it:
 import { getPostToLJDH } from "ljdhar";
 
 getPostToLJDH(5)
-  .then((data) => {
-    const stories = JSON.parse(data as string) as Story[];
+  .then((stories) => {
     console.log(stories);
   })
   .catch((error: Error) => {
