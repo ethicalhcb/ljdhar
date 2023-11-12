@@ -1,7 +1,7 @@
 {
   "name": "ljdhar",
   "module": "index.ts",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple library for get articles from Le Journal de Hacker",
   "main": "index.ts",
   "keywords": [

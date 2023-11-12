@@ -1,10 +1,12 @@
-## `Le Journal du Hacker` Articles Retriever
+## `ljdhar` - Le Journal du Hacker Articles Retriever
 
-[https://www.npmjs.com/package/ljdhar](https://www.npmjs.com/package/ljdhar)
+<p align="center">
+    <img src="https://raw.githubusercontent.com/ethicalhcb/ljdhar/master/logo.png" alt="Logo" width="500">
+</p>
 
 This project use Puppeteer to retrieve the latest articles from Le Journal du Hacker.
 
-### Installation
+### 📦 Installation
 
 To install the project's dependencies, run the following command:
 
@@ -12,43 +14,56 @@ To install the project's dependencies, run the following command:
 npm install ljdhar
 ```
 
-### Usage
+### 👨‍💻 Usage
 
-The index.ts file contains a function `getPostToLJDH(numStories: number)` that retrieves the latest numStories articles from "Le Journal du Hacker" and returns a Promise.
+The index.ts file contains several functions that retrieve and sort articles from "Le Journal du Hacker".
 
-Here's an example of how to use it:
+- `getPostToLJDH(numStories: number)`: Retrieves the latest articles from "Le Journal du Hacker". The number of articles to retrieve is specified by numStories. Returns an array of Story objects.
+- `sortedByScore(stories: Story[])`: Sorts articles by score. Takes in an array of Story objects and returns a sorted array of Story objects.
+- `searchArticlesByTag(tag: string, numStories: number)`: Searches for articles by tag. Takes in a tag and the number of articles to retrieve, and returns an array of Story objects.
+- `searchArticles(search: string, numStories: number)`: Searches for articles by title. Takes in a search string and the number of articles to retrieve, and returns an array of Story objects.
 
-```typescript
-import { getPostToLJDH } from "ljdhar";
 
-getPostToLJDH(5)
-  .then((stories) => {
-    console.log(stories);
-  })
-  .catch((error: Error) => {
-    console.error(error);
-  });
+
+> Each Story object contains the details of an article, including the title, URL, score, tags, number of comments, and the author's username.
+
+### 😄 Code Examples 
+
+```javascript
+import { getPostToLJDH, sortedByScore, searchArticlesByTag, searchArticles } from 'ljdhar';
+
+// Get the latest 10 articles
+getPostToLJDH(10).then(stories => console.log(stories));
+
+// Get the latest 10 articles and sort them by score
+getPostToLJDH(10).then(stories => {
+  const sortedStories = sortedByScore(stories);
+  console.log(sortedStories);
+});
+
+// Search for articles with the 'javascript' tag and retrieve the top 10
+searchArticlesByTag('javascript', 10).then(stories => console.log(stories));
+
+// Search for articles with the title containing 'hacker' and retrieve the top 10
+searchArticles('hacker', 10).then(stories => console.log(stories));
 ```
 
-This example retrieves the latest 5 articles and displays them in the console.
 
-### Known Issues
+## ⚠️ Known Issues
+Error: Could not find Chrome (ver. xxx.x.xxxx.xxx). This can occur if either
 
-If you encounter the Could not find Chrome error, make sure you have run npm install and check your Puppeteer cache path. For more information, refer to the Puppeteer configuration guide at https://pptr.dev/guides/configuration.
+> This error occurs when you don't have chrome for puppeteer installed on your machine. To fix this error run the following command:
 
-### Try these commands
+
+Try these commands
 
 ```bash
-npm/bun i @puppeteer/browsers
+node ./node_modules/ljdhar/install.js
 ```
 
-```bash
-npm/bun install puppeteer
-```
-
-```bash
-npm/bun install puppeteer-core
-```
+### 🔗 Links:
+- NPM : [https://www.npmjs.com/package/ljdhar](https://www.npmjs.com/package/ljdhar)
+- Github : [https://github.com/ethicalhcb/ljdhar](https://github.com/ethicalhcb/ljdhar)
 
 ### License
 

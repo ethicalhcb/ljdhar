@@ -170,3 +170,9 @@ dist
 
 # IntelliJ based IDEs
 .idea
+
+# exclure bun.lockb
+bun.lock
+
+# add visual studio code
+.vscode
