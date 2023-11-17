@@ -36,7 +36,7 @@ async function getStoryDetails(storyElement: ElementHandle): Promise<Story> {
  * @returns A Story object table containing story details
  */
 async function getPostToLJDH(numStories: number): Promise<Story[]> {
-    const browser = await puppeteer.launch({ args: ["--no-sandbox"], headless: false });
+    const browser = await puppeteer.launch({ args: ["--no-sandbox"], headless: "new" });
     const page = await browser.newPage();
     await page.setRequestInterception(true);
     page.on("request", (request) => {
