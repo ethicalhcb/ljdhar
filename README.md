@@ -1,5 +1,7 @@
 ## `ljdhar` - Le Journal du Hacker Articles Retriever
 
+help me here ❤️ : https://patreon.com/benoitpetit
+
 <p align="center">
     <img src="https://raw.githubusercontent.com/ethicalhcb/ljdhar/master/logo.png" alt="Logo" width="500">
 </p>
