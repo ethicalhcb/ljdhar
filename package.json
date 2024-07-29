@@ -1,13 +1,14 @@
 {
   "name": "ljdhar",
   "module": "index.ts",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A simple library for get articles from Le Journal de Hacker",
   "main": "index.ts",
   "keywords": [
     "ljdhar",
-    "le journal de hacker articles retriever",
-    "hacker news"
+    "le journal de hacker",
+    "hacker news",
+    "articles retriever"
   ],
   "author": "bp",
   "license": "MIT",
